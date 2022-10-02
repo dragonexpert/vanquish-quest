@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: com.revature.controller.FriendsControllerTest
+-------------------------------------------------------------------------------
+Tests run: 16, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 3.709 s <<< FAILURE! - in com.revature.controller.FriendsControllerTest
+getFriendsTest  Time elapsed: 0.201 s  <<< FAILURE!
+java.lang.AssertionError: 
+Response content
+Expected: "[{\"friend_id\":1,\"user1\":1,\"user2\":2},{\"friend_id\":2,\"user1\":1,\"user2\":3}]"
+     but: was "[{\"friend_id\":1,\"user1\":1,\"user2\":2},{\"friend_id\":35,\"user1\":1,\"user2\":3}]"
+	at com.revature.controller.FriendsControllerTest.getFriendsTest(FriendsControllerTest.java:32)
+
+getNoFriendsTest  Time elapsed: 0.193 s  <<< FAILURE!
+java.lang.AssertionError: Response status expected:<204> but was:<200>
+	at com.revature.controller.FriendsControllerTest.getNoFriendsTest(FriendsControllerTest.java:38)
+
+findRequestsTest  Time elapsed: 0.192 s  <<< FAILURE!
+java.lang.AssertionError: 
+Response content
+Expected: "[{\"request_id\":3,\"sender_id\":3,\"receiver_id\":1},{\"request_id\":4,\"sender_id\":2,\"receiver_id\":1}]"
+     but: was "[{\"request_id\":4,\"sender_id\":2,\"receiver_id\":1}]"
+	at com.revature.controller.FriendsControllerTest.findRequestsTest(FriendsControllerTest.java:88)
+
